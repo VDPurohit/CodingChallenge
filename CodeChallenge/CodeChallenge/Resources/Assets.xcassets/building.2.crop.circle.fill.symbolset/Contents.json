@@ -1,0 +1,25 @@
+{
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  },
+  "properties" : {
+    "localizable" : true
+  },
+  "symbols" : [
+    {
+      "filename" : "building.2.crop.circle.fill.svg",
+      "idiom" : "universal"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "filename" : "building.2.crop.circle.svg",
+      "idiom" : "universal"
+    }
+  ]
+}
