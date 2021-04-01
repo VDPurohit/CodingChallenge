@@ -14,7 +14,7 @@ class CellOfCity: UITableViewCell {
     @IBOutlet weak var labelOfCityWithCode: UILabel!
     @IBOutlet weak var labelOfCoordinate: UILabel!
     
-    static let identifier = "CellOfCity"
+    static let identifier = Constant.CellOfCityConstant.kCellOfCity
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -32,7 +32,7 @@ extension CellOfCity {
     //Modified by:-
     private func applyEffectToContainer() {
         
-        self.viewOfContainer.applyCornerEffect(cornerRadius: 6)
-        self.viewOfContainer.applyShadowEffect(shadowRadius: 1.0, shadowColor: #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1))
+        self.viewOfContainer.applyCornerEffect(cornerRadius: Constant.kCornerRaduis)
+        self.viewOfContainer.applyShadowEffect(shadowRadius: Constant.kShadowRaduis, shadowColor: ColorConstant.kCDCDCD)
     }
 }

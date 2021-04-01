@@ -17,14 +17,14 @@ class CityListViewController: UIViewController {
     //Constant and Variable declaration
     private var cityViewModel : CityViewModel!
     private var dataSource : CityTableViewDataSource<CellOfCity,[CityModel]>!
-    private var previousText = ""
+    private var previousText = Constant.kEmptyString
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configViewController()
-        callToViewModelForUIUpdate(searchText: "")
+        callToViewModelForUIUpdate(searchText: Constant.kEmptyString)
         applySearchBarEffect()
-        title = "CITIES"
+        title = Constant.CityListViewControllerConstant.kCITIES
         // Do any additional setup after loading the view.
     }
 }
@@ -32,8 +32,8 @@ class CityListViewController: UIViewController {
 //MARK:- Implementaion of UITableViewDelegate
 extension CityListViewController : UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cityMapStoboard = UIStoryboard(name: "CityMapStoboard", bundle: nil)
-        let cityMapViewController = cityMapStoboard.instantiateViewController(withIdentifier: "CityMapViewController") as! CityMapViewController
+        let cityMapStoboard = UIStoryboard(name: Constant.CityListViewControllerConstant.kCityMapStoboard, bundle: nil)
+        let cityMapViewController = cityMapStoboard.instantiateViewController(withIdentifier: Constant.CityListViewControllerConstant.kCityMapViewController) as! CityMapViewController
         cityMapViewController.cityName = self.cityViewModel!.bindFilterArray[indexPath.row].name!
         cityMapViewController.latitude = CLLocationDegrees(self.cityViewModel!.bindFilterArray[indexPath.row].coordinate!.lat!)
         cityMapViewController.longitude = CLLocationDegrees(self.cityViewModel!.bindFilterArray[indexPath.row].coordinate!.lon!)
@@ -44,15 +44,17 @@ extension CityListViewController : UITableViewDelegate {
 //MARK:- Implementaion of UISearchBarDelegate
 extension CityListViewController : UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        //callToViewModelForUIUpdate(searchText: searchText)
+        
+        if previousText != searchbar.searchTextField.text! {
+            previousText = searchbar.searchTextField.text!
+            DispatchQueue.main.async {
+                self.callToViewModelForUIUpdate(searchText: self.searchbar.searchTextField.text!)
+            }
+        }
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         self.view.endEditing(true)
-        if previousText != searchbar.searchTextField.text! {
-            previousText = searchbar.searchTextField.text!
-            callToViewModelForUIUpdate(searchText: searchbar.searchTextField.text!)
-        }
     }
 }
 
@@ -65,14 +67,14 @@ extension CityListViewController {
     //Modified by:-
     
     func callToViewModelForUIUpdate(searchText:String){
-        ActivityController.shared.showLoader(viewController: self)
+        self.showSpinner()
         self.cityViewModel =  CityViewModel()
         self.cityViewModel.applyFilter(searchText) { (isSuccess) in
+            self.updateDataSource()
             if isSuccess {
-                self.updateDataSource()
                 self.tableViewOfCity.restore()
             }else {
-                self.tableViewOfCity.setEmptyMessage("No data found.")
+                self.tableViewOfCity.setEmptyMessage(Constant.kNoDataFound)
             }
         }
     }
@@ -84,15 +86,15 @@ extension CityListViewController {
         
         self.dataSource = CityTableViewDataSource(cellIdentifier: CellOfCity.identifier, items: self.cityViewModel.bindFilterArray, configureCell: { (cell, data) in
             cell.labelOfCityWithCode.text = data.name! + " " + data.country!
-            cell.labelOfCoordinate.text = "Latitude:- " + data.coordinate!.lat!.description + " " + "Longitude:- " + data.coordinate!.lon!.description
+            cell.labelOfCoordinate.text = Constant.kLatitude + Constant.kColonWithDashSign + data.coordinate!.lat!.description + Constant.kOneSpace + Constant.kLongitude + Constant.kColonWithDashSign + data.coordinate!.lon!.description
         })
         
         DispatchQueue.main.async {
             self.tableViewOfCity.dataSource = self.dataSource
             self.tableViewOfCity.delegate = self
             self.tableViewOfCity.reloadData()
+            self.removeSpinner()
         }
-        ActivityController.shared.hideLoader(viewController: self)
     }
     
     //Functionality:- Config a table view of city
@@ -102,7 +104,7 @@ extension CityListViewController {
     
     private func configViewController() {
         
-        self.tableViewOfCity.register(UINib(nibName: "CellOfCity", bundle: nil), forCellReuseIdentifier: "CellOfCity")
+        self.tableViewOfCity.register(UINib(nibName: CellOfCity.identifier, bundle: nil), forCellReuseIdentifier: CellOfCity.identifier)
         self.searchbar.delegate = self
     }
     
@@ -112,8 +114,8 @@ extension CityListViewController {
     //Modified by:-
     
     private func applySearchBarEffect() {
-        
+
         self.searchbar.clipsToBounds = true
-        self.searchbar.applyCornerEffect(cornerRadius: 6)
+        self.searchbar.applyCornerEffect(cornerRadius: Constant.kCornerRaduis)
     }
 }

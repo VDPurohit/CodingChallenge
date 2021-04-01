@@ -20,10 +20,16 @@ class CityViewModel:NSObject{
     }
     
     func applyFilter(_ text:String,completionHandler:@escaping completionHandler) {
+        
         self.bindFilterArray?.removeAll()
         if let listOfCities = self.listOfCities {
             self.bindFilterArray = listOfCities.filter{($0.name != nil && $0.name!.hasPrefix(text)) && $0.coordinate != nil && ($0.coordinate!.lat != nil && $0.coordinate!.lon != nil)}
-            completionHandler(true)
+            
+            if bindFilterArray.count > 0 {
+                
+                completionHandler(true)
+                return
+            }
         }
         completionHandler(false)
     }

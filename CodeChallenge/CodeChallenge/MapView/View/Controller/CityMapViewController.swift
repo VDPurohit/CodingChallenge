@@ -17,7 +17,7 @@ class CityMapViewController: UIViewController {
     var latitude : CLLocationDegrees? = nil
     var longitude : CLLocationDegrees? = nil
     var cityName : String? = nil
-    
+                                                                    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.loadMapView()

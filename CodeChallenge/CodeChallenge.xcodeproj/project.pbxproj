@@ -20,11 +20,23 @@
 		841D2F372614720900B909A1 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D2F362614720900B909A1 /* Extension.swift */; };
 		841D2F4026147F9200B909A1 /* CellOfCity.xib in Resources */ = {isa = PBXBuildFile; fileRef = 841D2F3F26147F9200B909A1 /* CellOfCity.xib */; };
 		841D2F43261484A600B909A1 /* CityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D2F42261484A600B909A1 /* CityViewModel.swift */; };
+		845C46F52615CE1B00DFDC94 /* Code_Challenge_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845C46F42615CE1B00DFDC94 /* Code_Challenge_Test.swift */; };
+		845C46FB2615EAB200DFDC94 /* ColorConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845C46FA2615EAB200DFDC94 /* ColorConstant.swift */; };
 		847E27ED261489B2001CA361 /* CityTableViewDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847E27EC261489B2001CA361 /* CityTableViewDatasource.swift */; };
-		847E27F42614B3CB001CA361 /* ActivityController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847E27F32614B3CB001CA361 /* ActivityController.swift */; };
 		847E27FC2614B657001CA361 /* CityMapStoboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 847E27FB2614B657001CA361 /* CityMapStoboard.storyboard */; };
 		847E27FF2614B671001CA361 /* CityMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847E27FE2614B671001CA361 /* CityMapViewController.swift */; };
+		849F2BFF26159F7A00B5F4B6 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849F2BFE26159F7A00B5F4B6 /* Constant.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		845C46ED2615CC5C00DFDC94 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 841D2EE926146ACF00B909A1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 841D2EF026146ACF00B909A1;
+			remoteInfo = CodeChallenge;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		841D2EF126146ACF00B909A1 /* CodeChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodeChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -42,14 +54,25 @@
 		841D2F362614720900B909A1 /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		841D2F3F26147F9200B909A1 /* CellOfCity.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CellOfCity.xib; sourceTree = "<group>"; };
 		841D2F42261484A600B909A1 /* CityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityViewModel.swift; sourceTree = "<group>"; };
+		845C46E82615CC5C00DFDC94 /* Code_Challenge_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Code_Challenge_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		845C46EC2615CC5C00DFDC94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		845C46F42615CE1B00DFDC94 /* Code_Challenge_Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Code_Challenge_Test.swift; sourceTree = "<group>"; };
+		845C46FA2615EAB200DFDC94 /* ColorConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorConstant.swift; sourceTree = "<group>"; };
 		847E27EC261489B2001CA361 /* CityTableViewDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityTableViewDatasource.swift; sourceTree = "<group>"; };
-		847E27F32614B3CB001CA361 /* ActivityController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityController.swift; sourceTree = "<group>"; };
 		847E27FB2614B657001CA361 /* CityMapStoboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CityMapStoboard.storyboard; sourceTree = "<group>"; };
 		847E27FE2614B671001CA361 /* CityMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityMapViewController.swift; sourceTree = "<group>"; };
+		849F2BFE26159F7A00B5F4B6 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		841D2EEE26146ACF00B909A1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		845C46E52615CC5C00DFDC94 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -63,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				841D2EF326146ACF00B909A1 /* CodeChallenge */,
+				845C46E92615CC5C00DFDC94 /* Code_Challenge_Tests */,
 				841D2EF226146ACF00B909A1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -71,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				841D2EF126146ACF00B909A1 /* CodeChallenge.app */,
+				845C46E82615CC5C00DFDC94 /* Code_Challenge_Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -112,7 +137,8 @@
 				841D2F362614720900B909A1 /* Extension.swift */,
 				841D2EF426146ACF00B909A1 /* AppDelegate.swift */,
 				841D2EF626146ACF00B909A1 /* SceneDelegate.swift */,
-				847E27F32614B3CB001CA361 /* ActivityController.swift */,
+				849F2BFE26159F7A00B5F4B6 /* Constant.swift */,
+				845C46FA2615EAB200DFDC94 /* ColorConstant.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -163,6 +189,15 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		845C46E92615CC5C00DFDC94 /* Code_Challenge_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				845C46EC2615CC5C00DFDC94 /* Info.plist */,
+				845C46F42615CE1B00DFDC94 /* Code_Challenge_Test.swift */,
+			);
+			path = Code_Challenge_Tests;
+			sourceTree = "<group>";
+		};
 		847E27F72614B61C001CA361 /* MapView */ = {
 			isa = PBXGroup;
 			children = (
@@ -208,6 +243,24 @@
 			productReference = 841D2EF126146ACF00B909A1 /* CodeChallenge.app */;
 			productType = "com.apple.product-type.application";
 		};
+		845C46E72615CC5C00DFDC94 /* Code_Challenge_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 845C46F12615CC5C00DFDC94 /* Build configuration list for PBXNativeTarget "Code_Challenge_Tests" */;
+			buildPhases = (
+				845C46E42615CC5C00DFDC94 /* Sources */,
+				845C46E52615CC5C00DFDC94 /* Frameworks */,
+				845C46E62615CC5C00DFDC94 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				845C46EE2615CC5C00DFDC94 /* PBXTargetDependency */,
+			);
+			name = Code_Challenge_Tests;
+			productName = Code_Challenge_Tests;
+			productReference = 845C46E82615CC5C00DFDC94 /* Code_Challenge_Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -219,6 +272,10 @@
 				TargetAttributes = {
 					841D2EF026146ACF00B909A1 = {
 						CreatedOnToolsVersion = 12.4;
+					};
+					845C46E72615CC5C00DFDC94 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 841D2EF026146ACF00B909A1;
 					};
 				};
 			};
@@ -236,6 +293,7 @@
 			projectRoot = "";
 			targets = (
 				841D2EF026146ACF00B909A1 /* CodeChallenge */,
+				845C46E72615CC5C00DFDC94 /* Code_Challenge_Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -251,6 +309,13 @@
 				841D2F34261471EE00B909A1 /* cities.json in Resources */,
 				841D2EFE26146AD000B909A1 /* Assets.xcassets in Resources */,
 				841D2F2226146BEB00B909A1 /* CityListStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		845C46E62615CC5C00DFDC94 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,12 +335,29 @@
 				841D2F1826146B6300B909A1 /* CoordinateModel.swift in Sources */,
 				841D2EF526146ACF00B909A1 /* AppDelegate.swift in Sources */,
 				841D2F2726146C4200B909A1 /* CityListViewController.swift in Sources */,
-				847E27F42614B3CB001CA361 /* ActivityController.swift in Sources */,
 				841D2EF726146ACF00B909A1 /* SceneDelegate.swift in Sources */,
+				849F2BFF26159F7A00B5F4B6 /* Constant.swift in Sources */,
+				845C46FB2615EAB200DFDC94 /* ColorConstant.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		845C46E42615CC5C00DFDC94 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				845C46F52615CE1B00DFDC94 /* Code_Challenge_Test.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		845C46EE2615CC5C00DFDC94 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 841D2EF026146ACF00B909A1 /* CodeChallenge */;
+			targetProxy = 845C46ED2615CC5C00DFDC94 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		841D2EFF26146AD000B909A1 /* LaunchScreen.storyboard */ = {
@@ -420,7 +502,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.AceTechnoLabs.CodeChallenge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -439,7 +521,45 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.AceTechnoLabs.CodeChallenge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		845C46EF2615CC5C00DFDC94 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Code_Challenge_Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.AceTechnoLabs.Code-Challenge-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CodeChallenge.app/CodeChallenge";
+			};
+			name = Debug;
+		};
+		845C46F02615CC5C00DFDC94 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Code_Challenge_Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.AceTechnoLabs.Code-Challenge-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CodeChallenge.app/CodeChallenge";
 			};
 			name = Release;
 		};
@@ -460,6 +580,15 @@
 			buildConfigurations = (
 				841D2F0626146AD000B909A1 /* Debug */,
 				841D2F0726146AD000B909A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		845C46F12615CC5C00DFDC94 /* Build configuration list for PBXNativeTarget "Code_Challenge_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				845C46EF2615CC5C00DFDC94 /* Debug */,
+				845C46F02615CC5C00DFDC94 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
