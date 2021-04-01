@@ -21,6 +21,9 @@
 Xcode 12.4
 Swift 5
 
+#Version supported:-
+iOS 13 and later
+
 #To run this code:-
 
 1.Open Xcode
